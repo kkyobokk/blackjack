@@ -1,0 +1,232 @@
+@font-face {
+  font-family: 'ChosunGs';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  width : 100%;
+  height : 100%;
+}
+
+
+#root {
+  width : 100%;
+  height : 100%;
+}
+
+body {
+  width : 100%;
+  height : 100%;
+}
+
+
+.App {
+  text-align: center;
+  width : 100%;
+  height : 100%;
+  overflow-y : auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.block {
+  
+  display : flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap : 20px;
+  width : 80%;
+  margin : 20px auto;
+}
+
+.ChatBox {
+  width : 80%;
+  min-width : 100px;
+  height : 300px;
+  border: 1px #000000 solid;
+  margin : auto auto;
+  text-align: left;
+  overflow : scroll;
+  position : relative;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  background-color: #FFF;
+  font-size : 1rem;
+}
+
+.inputBox {
+  min-width : 100px;
+}
+
+.App::-webkit-scrollbar, .ChatBox::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.chat {
+  margin-left : 5px;
+}
+
+.Card {
+  position : relative;
+  width : 63px;
+  height: 88px;
+  border : 1px solid #000000;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #FFF;
+}
+
+.Marks {
+  position : "absolute";
+  font-family: "ChosunGs";
+}
+
+.indicateMark {
+  position : "absolute";
+  font-weight: 700;
+  font-family: "ChosunGs";
+}
+
+.BackSide {
+  width : 85%;
+  height: 88%;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #D8353F;
+  background-image: linear-gradient(45deg, #333 25%, transparent 25%, transparent 75%, #444 75%, #444), linear-gradient(-45deg, #400 25%, transparent 25%, transparent 75%, #444 75%, #444);
+  background-size: 20% 20%;
+}
+
+.Title {
+  font-size : 30px;
+  font-weight: 500;
+  margin : 10px 0;
+  height : 10%;
+}
+
+.strdBtn {
+  position : absolute;
+  left : 100%;
+  width : 100px;
+  height: 30px;
+  background-color: #BBB;
+  transform: translate(-100%, 0%);
+  border : 0px;
+  border-radius: 0px 0px 0px 10px;
+  font-size : 20px;
+}
+
+.GameBoard {
+  width : 100%;
+  height : 80%;
+}
+
+.foundation {
+  width : 95vw;
+  height : 50vw;
+  border : 1px solid #000;
+  margin : 20px auto;
+  border-radius : 0 0 50vw 50vw;
+  border : 0px;
+  position : relative;
+  background-color: #095;
+  min-width : 400px;
+  min-height : 175px;
+  max-width : 950px;
+  max-height : 500px;
+}
+
+.Util {
+  width : 100%;
+  height : 0%;
+}
+
+.Bet {
+  width : 50%;
+  max-width : 400px;
+  min-width : 200px;
+  height : 20%;
+  padding : 10px 0;
+  margin : 0 auto;
+  border : 1px solid #000;
+  position : absolute;
+  top : 50%;
+  left : 50%;
+  transform : translate(-50%, -50%);
+  background-color: #FFF;
+  font-size : 1.3rem;
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  gap : 20%;
+}
+
+.betInput {
+  text-align : center;
+  border : 0px;
+  background-color: #DDD;
+  height : 30px;
+  margin : auto auto;
+}
+
+.betInput:focus {
+  outline : none;
+}
+
+.minmaxBtn {
+  width : 23px;
+  height : 14px;
+  position : absolute;
+  top : 0px;
+  left : 100.5%;
+  transform : translate(-100%, 0);
+  border : 0px;
+  border-radius: 0 0 0 5px;
+  background-color: #E45;
+}
+
+.Deck {
+  position : absolute;
+  left : 78%;
+  top : 5%;
+  transform: rotate(4deg);
+}
+
+.fly{
+  position : absolute;
+  animation: FlyAway 1s forwards;
+}
+
+@keyframes FlyAway {
+  0% {
+    transform : translateX(0) translateY(0) rotate(0deg);
+    z-index : 1;
+  }
+  50% {
+    z-index : -1;
+  }
+  100% {
+    transform: translateX(400%) translateY(400%) rotateZ(45deg) rotateY(180deg);
+    z-index : -1;
+  }
+}
+
+.flip {
+  position : absolute;
+  animation : Flip 1s forwards;
+}
+
+@keyframes Flip {
+  0% {
+    transform : translate(0%, 0%) rotateY(0);
+  }
+  100% {
+    transform : translate(100%, 100%) rotateX(180deg) rotateY(-180deg);
+  }
+}
